@@ -1,0 +1,13 @@
+name: Variables
+run-name: Aprendiendo a usar Github actions variables
+on:
+  workflow_dispatch:
+env:
+  name: Javier Guevara
+  dia: Lunes
+jobs:
+  saludando:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Correr Script
+        run: echo Saludos ${{ env.name }} es el día ${{ env.dia }}
